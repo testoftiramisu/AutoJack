@@ -10,6 +10,7 @@ enum Environment {
     this.name = name;
   }
 
+  /** Returns {@link Environment} by it's label provided as a String. */
   public static Environment findByName(String label) {
     for (Environment environment : Environment.values()) {
       if (environment.name.equalsIgnoreCase(label)) {
@@ -19,6 +20,7 @@ enum Environment {
     return null;
   }
 
+  /** Returns name of Environment as a String. */
   public String getName() {
     return name;
   }
