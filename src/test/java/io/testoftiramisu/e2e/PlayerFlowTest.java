@@ -16,7 +16,7 @@ public class PlayerFlowTest extends BaseTest {
 
     GamePage page = openGamePage();
 
-    page.sitPlayer().playRound("50").unsitPlayer().closeGame();
+    page.sitPlayer().playRound().unseatPlayer().closeGame();
   }
 
   private GamePage openGamePage() {
