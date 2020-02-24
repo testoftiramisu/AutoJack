@@ -14,7 +14,7 @@ This project is meant for educational purposes only.
 
 * Java 11
 * Maven
-* Chrome browser
+* Chrome or Firefox browser
 
 ### Environment Setup
 
@@ -22,19 +22,12 @@ This project is meant for educational purposes only.
 
 2. Download dependencies:
     * Download [Maven](http://maven.apache.org/download.cgi)
-    * Download the latest version of [Chrome](https://www.google.com/chrome/) 
-    
-    Alternatively, for Mac users: 
-       
-    * Install Maven with [Homebrew](http://brew.sh/) (for MacOS)
-    ```bash
-    $ brew install maven
-    ```
+    * Download the latest version of [Chrome](https://www.google.com/chrome/)
+    * or Download the latest version of [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 
 4. Environment configuration:
 
-    * URL of target web site and browser could be configured using config files in _yml_ format in **src/main/resources** folder. 
-
+    * Base URL and browser could be configured using config files in _yml_ format from **src/main/resources** folder. 
   
 #### Running from CLI:
 
@@ -44,13 +37,11 @@ $ mvn clean test
     
 #### Resources
 
-##### [Sauce Labs Documentation](https://wiki.saucelabs.com/)
-
 ##### [Selenide Documentation](https://selenide.org/documentation.html)
 
-##### [Junit Documentation](http://junit.org/javadoc/latest/index.html)
+##### [Junit Documentation](https://junit.org/junit5/docs/current/user-guide/)
 
-##### [Java Documentation](https://docs.oracle.com/javase/7/docs/api/)
+##### [Java Documentation](https://docs.oracle.com/en/java/javase/11/index.html)
 
 
 *This code is provided on an "AS-IS” basis without warranty of any kind, either express or implied, including without limitation any implied warranties of condition, uninterrupted use, merchantability, fitness for a particular purpose, or non-infringement. Your tests and testing environments may require you to modify this framework. Issues regarding this framework should be submitted through GitHub.*
