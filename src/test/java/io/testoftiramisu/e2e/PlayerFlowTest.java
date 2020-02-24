@@ -12,7 +12,7 @@ public class PlayerFlowTest extends BaseTest {
 
   @Test
   @DisplayName("User should open the game, play a round and close the game.")
-  void userFlowTest() {
+  void playerFlowTest() {
 
     GamePage page = openGamePage();
 

@@ -29,12 +29,18 @@ public class GamePage {
   private static final List<Integer> OFFSETS = Arrays.asList(0, -203, 203);
   private SelenideElement canvas;
 
+  /** Creates a new instance of Game page and checks that it was successfully loaded. */
   public GamePage() {
     $(BURGER_MENU).shouldBe(visible);
     log.info("Age confirmed.");
     canvas = $(CANVAS);
   }
 
+  /**
+   * Sits player in the first available sit.
+   *
+   * <p>If all sits are occupied, checks then again until the free seat is found.
+   */
   public GamePage sitPlayer() {
     Configuration.timeout = 5000;
     boolean playerSeated = false;
@@ -57,6 +63,7 @@ public class GamePage {
     return this;
   }
 
+  /** Makes a bet and waits for the end of current round. */
   public GamePage playRound() {
     $(CHIP).doubleClick();
     log.info("A bet is made.");
@@ -69,12 +76,14 @@ public class GamePage {
     return this;
   }
 
+  /** Unseats a player. */
   public GamePage unseatPlayer() {
     canvas.click(-370, 235);
     log.info("Player unseated.");
     return this;
   }
 
+  /** Closes the game. */
   public void closeGame() {
     Configuration.timeout = 10000;
     Selenide.switchTo().defaultContent();

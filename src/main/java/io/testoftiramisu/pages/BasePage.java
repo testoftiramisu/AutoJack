@@ -26,6 +26,7 @@ public class BasePage {
     return this;
   }
 
+  /** Accepts cookies. */
   public BasePage acceptCookies() {
     SelenideElement acceptCookie = $(ACCEPT_COOKIE);
     acceptCookie.should(visible);
@@ -36,12 +37,14 @@ public class BasePage {
     return this;
   }
 
+  /** Presses the "DEAL ME IN" button. */
   public BasePage pressDealMeInButton() {
     $(DEAL_ME_IN).click();
     log.info("\"DEAL ME IN\" button pressed.");
     return this;
   }
 
+  /** Accepts age restriction. */
   public GamePage acceptAgeRestrictions() {
     ElementsCollection ageNoticeButtons = $$(AGE_BUTTON);
     ageNoticeButtons.get(0).click();
